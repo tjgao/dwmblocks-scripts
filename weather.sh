@@ -7,7 +7,6 @@ IFS=":" read cond_icon condition humidity temperature wind precipitation <<< $w
 result="$cond_icon $condition  $humidity 糖$temperature 煮$wind"
 
 if [ $precipitation != "0.0mm" ]; then
-    echo $precipitation
     result="$result    $precipitation"
 fi
 
