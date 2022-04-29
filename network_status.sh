@@ -14,7 +14,7 @@ function read_device() {
     rx_rate=$(numfmt --to iec --format "%3.1f" $(bc -l <<< "($rx-$last_rx)/$time_diff"))
     tx_rate=$(numfmt --to iec --format "%3.1f" $(bc -l <<< "($tx-$last_tx)/$time_diff"))
     echo "$time $rx $tx" > "/tmp/_last_read_$1.txt"
-    echo "$rx_rate $tx_rate"
+    echo "$rx_rate""B/s $tx_rate""B/s"
 }
 
 result=""
